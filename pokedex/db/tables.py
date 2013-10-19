@@ -862,7 +862,7 @@ class Generation(TableBase):
         info=dict(description="A numeric ID"))
     main_region_id = Column(Integer, ForeignKey('regions.id'), nullable=False,
         info=dict(description="ID of the region this generation's main games take place in"))
-    canonical_pokedex_id = Column(Integer, ForeignKey('pokedexes.id'), nullable=False,
+    canonical_pokedex_id = Column(Integer, ForeignKey('pokedexes.id'), nullable=True,
         info=dict(description=u"ID of the Pokédex this generation's main games use by default"))
     identifier = Column(Unicode(16), nullable=False,
         info=dict(description=u'An identifier', format='identifier'))
